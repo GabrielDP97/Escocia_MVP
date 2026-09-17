@@ -1,0 +1,4 @@
+stage,roc_auc,pr_auc,brier,lift_top_1pct,lift_top_10pct,oof_rows_used
+raw_random_forest,0.847381,0.5466616982427334,0.15905102158391862,,,
+level1_temporal_platt,0.847381,0.546662,0.10269160831611107,5.086447,3.69451,25404.0
+level2_seasonal,0.853704,0.572252,0.100471,5.369028,3.855141,

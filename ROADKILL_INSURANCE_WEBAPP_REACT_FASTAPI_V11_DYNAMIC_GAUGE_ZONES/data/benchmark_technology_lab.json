@@ -1,0 +1,520 @@
+{
+  "scope": {
+    "evaluation_year": 2017,
+    "rows_common": 6348,
+    "cells": 529,
+    "prevalence": 0.18052930056710775,
+    "warning": "Diagnóstico sobre test histórico. El barrido de pesos es exploratorio y no debe utilizarse para seleccionar un modelo final sin un conjunto temporal independiente."
+  },
+  "models": {
+    "level1_no_seasonal": {
+      "label": "Nivel 1 sin modulador estacional",
+      "metrics": {
+        "roc_auc": 0.8456624616790561,
+        "pr_auc": 0.5980872059763842,
+        "brier": 0.10571822761342507,
+        "log_loss": 0.3405827246960203,
+        "lift_top_1pct": 5.106511780104712,
+        "lift_top_5pct": 4.476703217096381,
+        "lift_top_10pct": 3.881848538566187
+      },
+      "delta_vs_current": {
+        "roc_auc": -0.005886613619543568,
+        "pr_auc": -0.018727298323682473,
+        "brier": 0.0019807146440938422,
+        "log_loss": 0.00547575933783051,
+        "lift_top_1pct": -0.17310209424083833,
+        "lift_top_5pct": -0.12193355066021283,
+        "lift_top_10pct": -0.15701859257121598
+      }
+    },
+    "current_final": {
+      "label": "Actual · Reto 05 + ajuste estacional",
+      "metrics": {
+        "roc_auc": 0.8515490752985997,
+        "pr_auc": 0.6168145043000667,
+        "brier": 0.10373751296933123,
+        "log_loss": 0.3351069653581898,
+        "lift_top_1pct": 5.27961387434555,
+        "lift_top_5pct": 4.598636767756594,
+        "lift_top_10pct": 4.038867131137403
+      },
+      "delta_vs_current": {
+        "roc_auc": 0.0,
+        "pr_auc": 0.0,
+        "brier": 0.0,
+        "log_loss": 0.0,
+        "lift_top_1pct": 0.0,
+        "lift_top_5pct": 0.0,
+        "lift_top_10pct": 0.0
+      }
+    },
+    "dnn": {
+      "label": "Reto 08 · DNN calibrada",
+      "metrics": {
+        "roc_auc": 0.8413427376904976,
+        "pr_auc": 0.594521057337438,
+        "brier": 0.10765443835474313,
+        "log_loss": 0.34588693291514583,
+        "lift_top_1pct": 5.106511780104712,
+        "lift_top_5pct": 4.389607823767658,
+        "lift_top_10pct": 3.9603578348517954
+      },
+      "delta_vs_current": {
+        "roc_auc": -0.010206337608102078,
+        "pr_auc": -0.022293446962628694,
+        "brier": 0.0039169253854118985,
+        "log_loss": 0.010779967556956038,
+        "lift_top_1pct": -0.17310209424083833,
+        "lift_top_5pct": -0.2090289439889359,
+        "lift_top_10pct": -0.07850929628560754
+      }
+    },
+    "lstm": {
+      "label": "Reto 09 · LSTM calibrada",
+      "metrics": {
+        "roc_auc": 0.8464966488254952,
+        "pr_auc": 0.6092131142547675,
+        "brier": 0.10384728110083574,
+        "log_loss": 0.33895202571441563,
+        "lift_top_1pct": 5.1930628272251305,
+        "lift_top_5pct": 4.476703217096381,
+        "lift_top_10pct": 3.881848538566187
+      },
+      "delta_vs_current": {
+        "roc_auc": -0.005052426473104443,
+        "pr_auc": -0.007601390045299139,
+        "brier": 0.00010976813150451181,
+        "log_loss": 0.003845060356225838,
+        "lift_top_1pct": -0.08655104712041961,
+        "lift_top_5pct": -0.12193355066021283,
+        "lift_top_10pct": -0.15701859257121598
+      }
+    },
+    "ensemble_equal": {
+      "label": "Ensemble igualitario 1/3 + 1/3 + 1/3",
+      "metrics": {
+        "roc_auc": 0.854567447209524,
+        "pr_auc": 0.6218745038307661,
+        "brier": 0.10313324379845107,
+        "log_loss": 0.33333129962127667,
+        "lift_top_1pct": 5.1930628272251305,
+        "lift_top_5pct": 4.633474925088083,
+        "lift_top_10pct": 4.0301438759945585
+      },
+      "delta_vs_current": {
+        "roc_auc": 0.0030183719109243556,
+        "pr_auc": 0.005059999530699466,
+        "brier": -0.0006042691708801617,
+        "log_loss": -0.0017756657369131235,
+        "lift_top_1pct": -0.08655104712041961,
+        "lift_top_5pct": 0.03483815733148887,
+        "lift_top_10pct": -0.008723255142844444
+      }
+    },
+    "ensemble_balanced": {
+      "label": "Ensemble exploratorio 50% + 25% + 25%",
+      "metrics": {
+        "roc_auc": 0.8546467897633678,
+        "pr_auc": 0.6223208133702353,
+        "brier": 0.10311016099281856,
+        "log_loss": 0.33305719223423513,
+        "lift_top_1pct": 5.1930628272251305,
+        "lift_top_5pct": 4.685732161085317,
+        "lift_top_10pct": 4.0563136414230945
+      },
+      "delta_vs_current": {
+        "roc_auc": 0.003097714464768142,
+        "pr_auc": 0.00550630907016858,
+        "brier": -0.0006273519765126745,
+        "log_loss": -0.002049773123954657,
+        "lift_top_1pct": -0.08655104712041961,
+        "lift_top_5pct": 0.08709539332872307,
+        "lift_top_10pct": 0.017446510285691552
+      }
+    }
+  },
+  "parameter_sweeps": {
+    "ensemble_weight": [
+      {
+        "current_weight": 0.0,
+        "deep_mean_weight": 1.0,
+        "roc_auc": 0.8526169287822578,
+        "pr_auc": 0.6182938633458069,
+        "brier": 0.10352770960642117,
+        "log_loss": 0.3352148478600672,
+        "lift_top_1pct": 5.1930628272251305,
+        "lift_top_5pct": 4.54637953175936,
+        "lift_top_10pct": 3.9952508554231767
+      },
+      {
+        "current_weight": 0.1,
+        "deep_mean_weight": 0.9,
+        "roc_auc": 0.8534809742259153,
+        "pr_auc": 0.6199543728765793,
+        "brier": 0.10336060783649142,
+        "log_loss": 0.3344547845392856,
+        "lift_top_1pct": 5.106511780104712,
+        "lift_top_5pct": 4.581217689090849,
+        "lift_top_10pct": 4.0039741105660225
+      },
+      {
+        "current_weight": 0.2,
+        "deep_mean_weight": 0.8,
+        "roc_auc": 0.8540737788459668,
+        "pr_auc": 0.620803851274923,
+        "brier": 0.10323530209016628,
+        "log_loss": 0.3338655265930746,
+        "lift_top_1pct": 5.106511780104712,
+        "lift_top_5pct": 4.598636767756594,
+        "lift_top_10pct": 4.0039741105660225
+      },
+      {
+        "current_weight": 0.3,
+        "deep_mean_weight": 0.7,
+        "roc_auc": 0.8544827368719107,
+        "pr_auc": 0.6216099430683422,
+        "brier": 0.10315179236744576,
+        "log_loss": 0.3334384615812414,
+        "lift_top_1pct": 5.1930628272251305,
+        "lift_top_5pct": 4.633474925088083,
+        "lift_top_10pct": 4.021420620851713
+      },
+      {
+        "current_weight": 0.4,
+        "deep_mean_weight": 0.6,
+        "roc_auc": 0.8546402477768987,
+        "pr_auc": 0.6221078015981191,
+        "brier": 0.10311007866832987,
+        "log_loss": 0.33316928088971953,
+        "lift_top_1pct": 5.1930628272251305,
+        "lift_top_5pct": 4.650894003753828,
+        "lift_top_10pct": 4.047590386280249
+      },
+      {
+        "current_weight": 0.5,
+        "deep_mean_weight": 0.5,
+        "roc_auc": 0.8546467897633678,
+        "pr_auc": 0.6223208133702353,
+        "brier": 0.10311016099281856,
+        "log_loss": 0.33305719223423513,
+        "lift_top_1pct": 5.1930628272251305,
+        "lift_top_5pct": 4.685732161085317,
+        "lift_top_10pct": 4.0563136414230945
+      },
+      {
+        "current_weight": 0.6,
+        "deep_mean_weight": 0.4,
+        "roc_auc": 0.8544461688449803,
+        "pr_auc": 0.6222193088113598,
+        "brier": 0.10315203934091187,
+        "log_loss": 0.3331047540726026,
+        "lift_top_1pct": 5.1930628272251305,
+        "lift_top_5pct": 4.650894003753828,
+        "lift_top_10pct": 4.047590386280249
+      },
+      {
+        "current_weight": 0.7,
+        "deep_mean_weight": 0.3,
+        "roc_auc": 0.8540258042785263,
+        "pr_auc": 0.6214927525195084,
+        "brier": 0.10323571371260978,
+        "log_loss": 0.3333182465510531,
+        "lift_top_1pct": 5.1930628272251305,
+        "lift_top_5pct": 4.581217689090849,
+        "lift_top_10pct": 4.0824834068516305
+      },
+      {
+        "current_weight": 0.8,
+        "deep_mean_weight": 0.2,
+        "roc_auc": 0.8534390384152155,
+        "pr_auc": 0.6203228909082652,
+        "brier": 0.10336118410791234,
+        "log_loss": 0.33370875306443465,
+        "lift_top_1pct": 5.27961387434555,
+        "lift_top_5pct": 4.581217689090849,
+        "lift_top_10pct": 4.073760151708785
+      },
+      {
+        "current_weight": 0.9,
+        "deep_mean_weight": 0.1,
+        "roc_auc": 0.8525830446472125,
+        "pr_auc": 0.6188733391007731,
+        "brier": 0.10352845052681948,
+        "log_loss": 0.3342945754809237,
+        "lift_top_1pct": 5.27961387434555,
+        "lift_top_5pct": 4.5637986104251045,
+        "lift_top_10pct": 4.073760151708785
+      },
+      {
+        "current_weight": 1.0,
+        "deep_mean_weight": 0.0,
+        "roc_auc": 0.8515490752985997,
+        "pr_auc": 0.6168145043000667,
+        "brier": 0.10373751296933123,
+        "log_loss": 0.3351069653581898,
+        "lift_top_1pct": 5.27961387434555,
+        "lift_top_5pct": 4.598636767756594,
+        "lift_top_10pct": 4.038867131137403
+      }
+    ],
+    "threshold_current": [
+      {
+        "threshold": 0.05,
+        "alerts": 4014,
+        "precision": 0.27254608868958646,
+        "recall": 0.9546247818499127,
+        "f1": 0.42403100775193797
+      },
+      {
+        "threshold": 0.1,
+        "alerts": 3153,
+        "precision": 0.32318426895020613,
+        "recall": 0.8891797556719022,
+        "f1": 0.4740637357525006
+      },
+      {
+        "threshold": 0.15,
+        "alerts": 2469,
+        "precision": 0.3758606723369785,
+        "recall": 0.8097731239092496,
+        "f1": 0.5134163208852005
+      },
+      {
+        "threshold": 0.2,
+        "alerts": 1823,
+        "precision": 0.4487109160724081,
+        "recall": 0.7137870855148342,
+        "f1": 0.551027281913102
+      },
+      {
+        "threshold": 0.25,
+        "alerts": 1358,
+        "precision": 0.5139911634756995,
+        "recall": 0.6090750436300174,
+        "f1": 0.5575079872204473
+      },
+      {
+        "threshold": 0.3,
+        "alerts": 1062,
+        "precision": 0.5753295668549906,
+        "recall": 0.5331588132635253,
+        "f1": 0.5534420289855073
+      },
+      {
+        "threshold": 0.35,
+        "alerts": 847,
+        "precision": 0.6399055489964581,
+        "recall": 0.47294938917975565,
+        "f1": 0.5439036628198696
+      },
+      {
+        "threshold": 0.4,
+        "alerts": 690,
+        "precision": 0.7043478260869566,
+        "recall": 0.42408376963350786,
+        "f1": 0.5294117647058824
+      },
+      {
+        "threshold": 0.45,
+        "alerts": 577,
+        "precision": 0.7521663778162911,
+        "recall": 0.3787085514834206,
+        "f1": 0.5037724898432966
+      },
+      {
+        "threshold": 0.5,
+        "alerts": 499,
+        "precision": 0.7595190380761523,
+        "recall": 0.3307155322862129,
+        "f1": 0.460790273556231
+      }
+    ],
+    "threshold_ensemble_balanced": [
+      {
+        "threshold": 0.05,
+        "alerts": 4176,
+        "precision": 0.2653256704980843,
+        "recall": 0.9668411867364747,
+        "f1": 0.4163848177376926
+      },
+      {
+        "threshold": 0.1,
+        "alerts": 3176,
+        "precision": 0.3214735516372796,
+        "recall": 0.8909249563699826,
+        "f1": 0.47246645071726057
+      },
+      {
+        "threshold": 0.15,
+        "alerts": 2403,
+        "precision": 0.3920099875156055,
+        "recall": 0.8219895287958116,
+        "f1": 0.5308537616229924
+      },
+      {
+        "threshold": 0.2,
+        "alerts": 1799,
+        "precision": 0.4563646470261256,
+        "recall": 0.7164048865619547,
+        "f1": 0.5575551782682512
+      },
+      {
+        "threshold": 0.25,
+        "alerts": 1317,
+        "precision": 0.5254365983295368,
+        "recall": 0.6038394415357766,
+        "f1": 0.5619163621599675
+      },
+      {
+        "threshold": 0.3,
+        "alerts": 1000,
+        "precision": 0.6,
+        "recall": 0.5235602094240838,
+        "f1": 0.5591798695246971
+      },
+      {
+        "threshold": 0.35,
+        "alerts": 811,
+        "precision": 0.6732429099876696,
+        "recall": 0.47643979057591623,
+        "f1": 0.5579969340827798
+      },
+      {
+        "threshold": 0.4,
+        "alerts": 669,
+        "precision": 0.7144992526158446,
+        "recall": 0.41710296684118675,
+        "f1": 0.5267217630853995
+      },
+      {
+        "threshold": 0.45,
+        "alerts": 575,
+        "precision": 0.7513043478260869,
+        "recall": 0.3769633507853403,
+        "f1": 0.5020337013364323
+      },
+      {
+        "threshold": 0.5,
+        "alerts": 501,
+        "precision": 0.7644710578842315,
+        "recall": 0.33420593368237345,
+        "f1": 0.46508803885853056
+      }
+    ]
+  },
+  "bootstrap": {
+    "seasonal_layer_vs_level1": {
+      "samples_requested": 500,
+      "samples_used": 500,
+      "cluster": "cell",
+      "seed": 43,
+      "metrics": {
+        "pr_auc": {
+          "mean_delta": 0.020816243894500774,
+          "ci95_low": 0.01462169286468174,
+          "ci95_high": 0.027438812956602745
+        },
+        "roc_auc": {
+          "mean_delta": 0.006074152487711492,
+          "ci95_low": 0.0031276523317638055,
+          "ci95_high": 0.00881053811890042
+        },
+        "brier": {
+          "mean_delta": -0.0019944026210578242,
+          "ci95_low": -0.0027439317226894302,
+          "ci95_high": -0.001275254121800798
+        }
+      }
+    },
+    "ensemble_balanced_vs_current": {
+      "samples_requested": 500,
+      "samples_used": 500,
+      "cluster": "cell",
+      "seed": 42,
+      "metrics": {
+        "pr_auc": {
+          "mean_delta": 0.005238534392118087,
+          "ci95_low": 0.0003560183371766336,
+          "ci95_high": 0.010398551784105385
+        },
+        "roc_auc": {
+          "mean_delta": 0.0030587981499494814,
+          "ci95_low": 0.0004997873678892512,
+          "ci95_high": 0.005585494985049775
+        },
+        "brier": {
+          "mean_delta": -0.0006298873571216199,
+          "ci95_low": -0.001143437790527053,
+          "ci95_high": -4.225623762258105e-05
+        }
+      }
+    }
+  },
+  "runtime": {
+    "operation": "vectorized score fusion only; NOT end-to-end model inference",
+    "rows": 6348,
+    "iterations": 300,
+    "median_ms": 0.01768249990163895,
+    "p95_ms": 0.01811310035009228,
+    "per_row_median_us": 0.0027855229838750707
+  },
+  "interpretation": {
+    "seasonal_layer": "Aporta señal incremental reproducible en este test: mejora ranking y calibración frente a p_level1.",
+    "dnn_lstm_alone": "No superan de forma consistente al score actual del Reto 05 cuando se evalúan por separado.",
+    "ensemble": "La fusión exploratoria mejora modestamente PR-AUC/ROC-AUC/Brier, pero el peso se ha inspeccionado en test y no debe promocionarse todavía a producción.",
+    "lift": "El ensemble no domina todas las métricas de Lift; por eso no se declara una mejora universal."
+  },
+  "capabilities": [
+    {
+      "technology": "pandas / NumPy",
+      "status": "aplicado",
+      "evidence": "Carga, joins, ranking, histogramas y benchmark vectorizado sobre los artefactos 2017."
+    },
+    {
+      "technology": "scikit-learn",
+      "status": "aplicado",
+      "evidence": "ROC-AUC, PR-AUC, Brier, log-loss, Lift y bootstrap comparativo agrupado por cell."
+    },
+    {
+      "technology": "Calibración temporal Platt",
+      "status": "aplicado-auditado",
+      "evidence": "Se integra el protocolo temporal estricto de Reto 05: Platt con OOF temporal, selección en 2016 y test 2017 abierto una sola vez. El ZIP recalcula y verifica el test final; DNN/SimpleRNN/LSTM mantienen además su auditoría raw→calibrated."
+    },
+    {
+      "technology": "OSM / triaje vial",
+      "status": "aplicado-parcial",
+      "evidence": "Contexto de carretera, iluminación, velocidad y bosque próximo mediante caché/tabla offline; no se usa para alterar el score histórico."
+    },
+    {
+      "technology": "astral",
+      "status": "integrado-operativo",
+      "evidence": "Endpoint de contexto solar preparado para coordenadas + timestamp; no entra en métricas 2017 porque los artefactos no contienen hora exacta del evento."
+    },
+    {
+      "technology": "GeoPandas / Shapely · red 1D 250 m",
+      "status": "no-reproducible-con-este-zip",
+      "evidence": "El ZIP aporta centros de celdas BNG de 10 km, no geometría vial segmentada de 250 m ni proyecciones de eventos."
+    },
+    {
+      "technology": "Edge effect forestal <50 m",
+      "status": "no-reproducible-con-este-zip",
+      "evidence": "Existe un indicador contextual forest_within_200m, pero no distancias métricas a linde forestal por observación."
+    },
+    {
+      "technology": "Modelo Hurdle 1D",
+      "status": "no-reentrenable-con-este-zip",
+      "evidence": "Hay predicciones históricas y niveles del Reto 05, pero no el dataset/estimadores serializados necesarios para reconstruir el Hurdle del capítulo 7."
+    },
+    {
+      "technology": "K-Means / clustering",
+      "status": "aplicado-descriptivo",
+      "evidence": "cluster del Reto 06 se conserva en la ruta y se usa como contexto; no se introduce post-hoc en el score para evitar leakage."
+    },
+    {
+      "technology": "SHAP",
+      "status": "pendiente-de-estimador",
+      "evidence": "No se generan explicaciones falsas: hacen falta el modelo serializado y exactamente las features con las que fue entrenado."
+    }
+  ]
+}
