@@ -1,0 +1,81 @@
+{
+  "model": "MLP de presencia",
+  "architecture": "Dense 64 → Dense 32 → sigmoid; Dropout 0,15; L2 1e-5",
+  "calibration": "Sin Platt adicional",
+  "scope": {
+    "train": "2009–2015",
+    "validation": 2016,
+    "test": 2017,
+    "test_rows": 6336,
+    "test_cells": 528,
+    "test_positives": 1148
+  },
+  "threshold": 0.2822222222222222,
+  "test_metrics": {
+    "roc_auc": 0.8441,
+    "pr_auc": 0.6026,
+    "brier": 0.1055,
+    "f1": 0.556,
+    "precision": 0.5252,
+    "recall": 0.5906,
+    "accuracy": 0.8291,
+    "alerts": 1291
+  },
+  "confusion": {
+    "tn": 4575,
+    "fp": 613,
+    "fn": 470,
+    "tp": 678
+  },
+  "precision_digits": 4,
+  "provenance": {
+    "source": "RetoRoadkill_cap08_U1_U2_U3(3).ipynb",
+    "cells": [
+      123,
+      125,
+      129
+    ],
+    "sha256": "d223d4f03d4b2460ce78b7005af27ede96e87d69b6322ba2721c12f17cf05a50",
+    "status": "Valores redondeados de las salidas del notebook ejecutado"
+  },
+  "common_comparison": {
+    "source": "Roadkill_Comparacion_Frontend_MLP_LSTM(1).ipynb",
+    "cell": 23,
+    "n": 6312,
+    "cells": 526,
+    "positives": 1146,
+    "precision_digits": 6,
+    "models": [
+      {
+        "model": "Principal frontend",
+        "roc_auc": 0.850515,
+        "pr_auc": 0.616815,
+        "brier": 0.104329,
+        "f1": 0.55642,
+        "precision": 0.502107,
+        "recall": 0.623909,
+        "threshold": 0.2425809815683556
+      },
+      {
+        "model": "Nueva MLP reentrenada",
+        "roc_auc": 0.841542,
+        "pr_auc": 0.595816,
+        "brier": 0.106472,
+        "f1": 0.553263,
+        "precision": 0.534581,
+        "recall": 0.573298,
+        "threshold": 0.2921212121212121
+      },
+      {
+        "model": "LSTM original + Platt",
+        "roc_auc": 0.845451,
+        "pr_auc": 0.609217,
+        "brier": 0.104439,
+        "f1": 0.572143,
+        "precision": 0.547923,
+        "recall": 0.598604,
+        "threshold": 0.2663253666399734
+      }
+    ]
+  }
+}

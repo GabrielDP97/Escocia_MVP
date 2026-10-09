@@ -1,0 +1,27 @@
+{
+  "protocol": {
+    "subtrain": "2008-2015",
+    "validation": 2016,
+    "development_refit": "2008-2016",
+    "test": 2017,
+    "excluded": [
+      2018
+    ],
+    "cv": "expanding_temporal_only",
+    "random_cv_fallback": false
+  },
+  "classification": {
+    "selected_base_model": "RandomForest",
+    "selected_output_mode": "Nivel2_validation",
+    "selected_threshold_from_validation": 0.2425809815683556,
+    "selection_metric": "pr_auc"
+  },
+  "count": {
+    "selected_model": "Poisson_offset",
+    "selection_metric": "PoissonDeviance"
+  },
+  "datasets": [
+    "DfT AADF",
+    "DVC Scotland"
+  ]
+}

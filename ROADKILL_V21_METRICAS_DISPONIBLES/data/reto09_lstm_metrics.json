@@ -1,0 +1,164 @@
+{
+  "reto": 9,
+  "title": "Predicción espacio-temporal RNN / LSTM",
+  "version": "test_final_2017",
+  "scope": {
+    "train_target_years": "2009-2015",
+    "validation_year": 2016,
+    "test_year": 2017,
+    "test_rows": 6348,
+    "test_cells": 529,
+    "test_positives": 1146,
+    "test_prevalence": 0.18052930056710775,
+    "excluded_year": 2018,
+    "spatial_unit": "BNG 10 km cell (proxy de tramo, coherente con Reto 08)"
+  },
+  "temporal_design": {
+    "window_candidates": [
+      6,
+      12
+    ],
+    "selected_window_months": 12,
+    "primary_horizon_months": 1,
+    "secondary_horizon_months": 3,
+    "leakage_policy": "Split por target year; inputs estrictamente anteriores al target; preprocessor fit solo en train."
+  },
+  "selected_model": {
+    "name": "LSTM + Platt",
+    "base_model": "LSTM",
+    "selection_metric": "validation_pr_auc",
+    "threshold_from_validation": 0.2663253666399734,
+    "epochs_run": 38,
+    "best_epoch_by_pr": 30,
+    "calibration": "Platt ajustado exclusivamente en validation"
+  },
+  "model_comparison": [
+    {
+      "model": "LSTM + Platt",
+      "threshold_from_val": 0.2663253666399734,
+      "val_roc_auc": 0.8475174527690097,
+      "val_pr_auc": 0.5795445807398876,
+      "val_brier": 0.0996058508850726,
+      "test_roc_auc": 0.8464966488254952,
+      "test_pr_auc": 0.6092131142547675,
+      "test_brier": 0.1038472811008357,
+      "test_precision": 0.547923322683706,
+      "test_recall": 0.5986038394415357,
+      "test_f1": 0.5721434528773979,
+      "lift_top_1pct": 5.1930628272251305,
+      "lift_top_5pct": 4.476703217096381,
+      "epochs_run": 38.0,
+      "best_epoch_by_pr": 30.0
+    },
+    {
+      "model": "SimpleRNN + Platt",
+      "threshold_from_val": 0.2972723669522845,
+      "val_roc_auc": 0.8436472563057165,
+      "val_pr_auc": 0.5695900281765949,
+      "val_brier": 0.100600952188808,
+      "test_roc_auc": 0.8447883516408308,
+      "test_pr_auc": 0.6046199785171533,
+      "test_brier": 0.104342759770071,
+      "test_precision": 0.5697569756975698,
+      "test_recall": 0.5523560209424084,
+      "test_f1": 0.5609215773150199,
+      "lift_top_1pct": 5.1930628272251305,
+      "lift_top_5pct": 4.407026902433403,
+      "epochs_run": 40.0,
+      "best_epoch_by_pr": 36.0
+    },
+    {
+      "model": "Lag Logistic Regression + Platt",
+      "threshold_from_val": 0.235616847913447,
+      "val_roc_auc": 0.8373761054550262,
+      "val_pr_auc": 0.550502384833271,
+      "val_brier": 0.1039778451618054,
+      "test_roc_auc": 0.8379122206320162,
+      "test_pr_auc": 0.5906925966498882,
+      "test_brier": 0.1071857468843466,
+      "test_precision": 0.5305164319248826,
+      "test_recall": 0.5916230366492147,
+      "test_f1": 0.5594059405940595,
+      "lift_top_1pct": 4.933409685863874,
+      "lift_top_5pct": 4.372188745101913,
+      "epochs_run": null,
+      "best_epoch_by_pr": null
+    }
+  ],
+  "test_2017": {
+    "raw_lstm": {
+      "roc_auc": 0.8464966488254952,
+      "pr_auc": 0.6092131142547675,
+      "brier": 0.16554153508220168
+    },
+    "calibrated_lstm": {
+      "roc_auc": 0.8464966488254952,
+      "pr_auc": 0.6092131142547675,
+      "brier": 0.10384728110083574,
+      "precision": 0.547923322683706,
+      "recall": 0.5986038394415357,
+      "f1": 0.5721434528773979,
+      "lift_top_1pct": 5.1930628272251305,
+      "lift_top_5pct": 4.476703217096381
+    },
+    "calibration_effect": {
+      "absolute_brier_reduction": 0.06169425398136594,
+      "relative_brier_reduction": 0.3726814176921272
+    }
+  },
+  "horizon_comparison": [
+    {
+      "model": "LSTM",
+      "horizon_months": 1,
+      "test_roc_auc": 0.8464966488254952,
+      "test_pr_auc": 0.6092131142547675,
+      "test_brier": 0.10384728110083574
+    },
+    {
+      "model": "LSTM",
+      "horizon_months": 3,
+      "test_roc_auc": 0.8436,
+      "test_pr_auc": 0.603445,
+      "test_brier": 0.104913
+    },
+    {
+      "model": "Lag Logistic Regression",
+      "horizon_months": 1,
+      "test_roc_auc": 0.8379122206320162,
+      "test_pr_auc": 0.5906925966498882,
+      "test_brier": 0.10718574688434669
+    },
+    {
+      "model": "Lag Logistic Regression",
+      "horizon_months": 3,
+      "test_roc_auc": 0.834345,
+      "test_pr_auc": 0.589281,
+      "test_brier": 0.107805
+    }
+  ],
+  "bootstrap_2017": {
+    "cluster": "cell",
+    "replicates": 300,
+    "roc_auc": {
+      "estimate": 0.8464966488254952,
+      "ci95_low": 0.826545,
+      "ci95_high": 0.862131
+    },
+    "pr_auc": {
+      "estimate": 0.6092131142547675,
+      "ci95_low": 0.556896,
+      "ci95_high": 0.654737
+    },
+    "brier": {
+      "estimate": 0.10384728110083574,
+      "ci95_low": 0.096828,
+      "ci95_high": 0.111731
+    }
+  },
+  "provenance": {
+    "source": "09_Prediccion_Espacio_Temporal_RNN_LSTM_Escocia(2).ipynb",
+    "status": "verified_from_executed_notebook_outputs_and_saved_artifacts",
+    "comparison_note": "Las métricas oficiales del Reto 09 ya usan 6.348 secuencias, que coinciden con la muestra común del benchmark 05/08/09.",
+    "ece_note": "El ECE cuantílico mostrado en la auditoría general se calcula en el frontend/backend a partir de las mismas predicciones, pero no es una métrica impresa explícitamente por el notebook."
+  }
+}

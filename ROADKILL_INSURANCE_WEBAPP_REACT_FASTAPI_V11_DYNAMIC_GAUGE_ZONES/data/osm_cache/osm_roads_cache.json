@@ -214,5 +214,29 @@
     "lanes": 2,
     "forest_within_200m": true,
     "source": "scotland_triage_db"
+  },
+  "A836_all_all": {
+    "road_name": "A836",
+    "triage_level": "NIVEL 2 - ALERTA NARANJA",
+    "dominant_species": "Corzo / Ciervo Rojo",
+    "severity_risk": "MEDIA-ALTA",
+    "highway": "primary",
+    "maxspeed_mph": 60,
+    "is_lit": false,
+    "lanes": 2,
+    "forest_within_200m": true,
+    "source": "scotland_triage_db"
+  },
+  "A7_all_all": {
+    "road_name": "A7",
+    "triage_level": "NIVEL 2 - ALERTA NARANJA",
+    "dominant_species": "Corzo / Ciervo Rojo",
+    "severity_risk": "MEDIA-ALTA",
+    "highway": "primary",
+    "maxspeed_mph": 60,
+    "is_lit": false,
+    "lanes": 2,
+    "forest_within_200m": true,
+    "source": "scotland_triage_db"
   }
 }

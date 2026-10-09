@@ -1,0 +1,112 @@
+{
+  "reto": 7,
+  "title": "NLP & Text Mining",
+  "version": "V3",
+  "scope": {
+    "parent_documents": 37,
+    "chunks": 256,
+    "tokens_total": 28390,
+    "vocabulary_size": 4231,
+    "classes": [
+      "ecology",
+      "insurance",
+      "compliance",
+      "safety"
+    ],
+    "validation_chunks": 52,
+    "test_chunks": 50,
+    "train_balanced_chunks": 104,
+    "split_rule": "Split por documento padre; ningún parent_doc_id se comparte entre train, validation y test."
+  },
+  "selected_model": {
+    "name": "MultinomialNB",
+    "selection_metric": "validation_macro_f1",
+    "validation_accuracy": 0.980769,
+    "validation_macro_f1": 0.975758,
+    "test_accuracy": 0.92,
+    "test_balanced_accuracy": 0.9375,
+    "test_macro_f1": 0.922969,
+    "test_weighted_f1": 0.916527
+  },
+  "model_comparison": [
+    {
+      "model": "MultinomialNB",
+      "validation_accuracy": 0.980769,
+      "validation_macro_f1": 0.975758,
+      "test_accuracy": 0.92,
+      "test_macro_f1": 0.922969
+    },
+    {
+      "model": "LogisticRegression",
+      "validation_accuracy": 0.980769,
+      "validation_macro_f1": 0.975758,
+      "test_accuracy": 0.9,
+      "test_macro_f1": 0.905664
+    },
+    {
+      "model": "LinearSVC",
+      "validation_accuracy": 0.980769,
+      "validation_macro_f1": 0.975758,
+      "test_accuracy": 0.9,
+      "test_macro_f1": 0.905664
+    },
+    {
+      "model": "CNN1D_LSTM",
+      "validation_accuracy": 0.923077,
+      "validation_macro_f1": 0.89889,
+      "test_accuracy": 0.9,
+      "test_macro_f1": 0.887062
+    },
+    {
+      "model": "LSTM",
+      "validation_accuracy": 0.307692,
+      "validation_macro_f1": 0.125,
+      "test_accuracy": 0.38,
+      "test_macro_f1": 0.202576
+    },
+    {
+      "model": "DummyMostFrequent",
+      "validation_accuracy": 0.307692,
+      "validation_macro_f1": 0.117647,
+      "test_accuracy": 0.32,
+      "test_macro_f1": 0.121212
+    }
+  ],
+  "clustering": {
+    "algorithm": "KMeans",
+    "selected_k": 6,
+    "silhouette": 0.453931,
+    "ari_vs_document_domain": 0.7449
+  },
+  "test_classification_report": {
+    "ecology": {
+      "precision": 0.91,
+      "recall": 1.0,
+      "f1": 0.95,
+      "support": 10
+    },
+    "insurance": {
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.86,
+      "support": 16
+    },
+    "compliance": {
+      "precision": 0.89,
+      "recall": 1.0,
+      "f1": 0.94,
+      "support": 16
+    },
+    "safety": {
+      "precision": 0.89,
+      "recall": 1.0,
+      "f1": 0.94,
+      "support": 8
+    }
+  },
+  "provenance": {
+    "source": "07_NLP_Text_Mining_Escocia(3).ipynb",
+    "status": "verified_from_executed_notebook_outputs",
+    "note": "Estas métricas pertenecen a clasificación documental NLP; no son métricas de probabilidad de atropello y no deben mezclarse con Brier/ROC/PR-AUC de los Retos 5, 8 o 9."
+  }
+}

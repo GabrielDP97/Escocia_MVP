@@ -1,0 +1,836 @@
+{
+  "groups": [
+    {
+      "id": "classical-validation",
+      "task": "presence",
+      "title": "Clasificadores tabulares · selección de modelos",
+      "phase": "validation",
+      "n": 6372,
+      "note": "Validación 2016; train 2008–2015. Umbral 0,50. Gaussian Naive Bayes, KNN y SVC se entrenan con muestras limitadas; las métricas se evalúan en el conjunto completo de validación.",
+      "digits": 6,
+      "evidence": "random-forest",
+      "source": {
+        "file": "Reto5_Trazabilidad_Completa_Frontend_2017_REGENERADO(3).ipynb",
+        "cell": 31,
+        "table": 0
+      },
+      "rows": [
+        {
+          "roc_auc": 0.847381,
+          "pr_auc": 0.546662,
+          "precision": 0.365351,
+          "recall": 0.788079,
+          "f1": 0.499251,
+          "lift_top_1pct": 5.086447,
+          "lift_top_10pct": 3.69451,
+          "brier": 0.159051,
+          "model": "Random Forest",
+          "threshold": 0.5
+        },
+        {
+          "roc_auc": 0.848825,
+          "pr_auc": 0.546199,
+          "precision": 0.337481,
+          "recall": 0.846736,
+          "f1": 0.48261,
+          "lift_top_1pct": 4.898061,
+          "lift_top_10pct": 3.713408,
+          "brier": 0.173439,
+          "model": "XGBoost",
+          "threshold": 0.5
+        },
+        {
+          "roc_auc": 0.834703,
+          "pr_auc": 0.531686,
+          "precision": 0.722222,
+          "recall": 0.270577,
+          "f1": 0.393668,
+          "lift_top_1pct": 4.803867,
+          "lift_top_10pct": 3.741754,
+          "brier": 0.105146,
+          "model": "Gradient Boosting",
+          "threshold": 0.5
+        },
+        {
+          "roc_auc": 0.834975,
+          "pr_auc": 0.528118,
+          "precision": 0.351375,
+          "recall": 0.773888,
+          "f1": 0.483309,
+          "lift_top_1pct": 4.898061,
+          "lift_top_10pct": 3.760652,
+          "brier": 0.17317,
+          "model": "Stacking temporal",
+          "threshold": 0.5
+        },
+        {
+          "roc_auc": 0.834977,
+          "pr_auc": 0.528094,
+          "precision": 0.484776,
+          "recall": 0.572375,
+          "f1": 0.524946,
+          "lift_top_1pct": 4.709674,
+          "lift_top_10pct": 3.741754,
+          "brier": 0.135319,
+          "model": "Voting soft",
+          "threshold": 0.5
+        },
+        {
+          "roc_auc": 0.830764,
+          "pr_auc": 0.521151,
+          "precision": 0.311782,
+          "recall": 0.821192,
+          "f1": 0.451966,
+          "lift_top_1pct": 4.709674,
+          "lift_top_10pct": 3.713408,
+          "brier": 0.17446,
+          "model": "Bagging",
+          "threshold": 0.5
+        },
+        {
+          "roc_auc": 0.809988,
+          "pr_auc": 0.505236,
+          "precision": 0.681548,
+          "recall": 0.216651,
+          "f1": 0.328787,
+          "lift_top_1pct": 4.521287,
+          "lift_top_10pct": 3.543328,
+          "brier": 0.108549,
+          "model": "KNN",
+          "threshold": 0.5
+        },
+        {
+          "roc_auc": 0.82602,
+          "pr_auc": 0.496565,
+          "precision": 0.32815,
+          "recall": 0.778619,
+          "f1": 0.461711,
+          "lift_top_1pct": 4.709674,
+          "lift_top_10pct": 3.685061,
+          "brier": 0.177783,
+          "model": "Árbol de decisión",
+          "threshold": 0.5
+        },
+        {
+          "roc_auc": 0.812829,
+          "pr_auc": 0.490953,
+          "precision": 0.323577,
+          "recall": 0.753075,
+          "f1": 0.452659,
+          "lift_top_1pct": 4.521287,
+          "lift_top_10pct": 3.486635,
+          "brier": 0.196082,
+          "model": "Regresión logística L1",
+          "threshold": 0.5
+        },
+        {
+          "roc_auc": 0.812752,
+          "pr_auc": 0.490712,
+          "precision": 0.323577,
+          "recall": 0.753075,
+          "f1": 0.452659,
+          "lift_top_1pct": 4.61548,
+          "lift_top_10pct": 3.467737,
+          "brier": 0.196075,
+          "model": "Regresión logística Elastic Net",
+          "threshold": 0.5
+        },
+        {
+          "roc_auc": 0.812545,
+          "pr_auc": 0.490113,
+          "precision": 0.323577,
+          "recall": 0.753075,
+          "f1": 0.452659,
+          "lift_top_1pct": 4.521287,
+          "lift_top_10pct": 3.467737,
+          "brier": 0.195953,
+          "model": "Regresión logística L2",
+          "threshold": 0.5
+        },
+        {
+          "roc_auc": 0.814252,
+          "pr_auc": 0.488804,
+          "precision": 0.325572,
+          "recall": 0.754021,
+          "f1": 0.454779,
+          "lift_top_1pct": 4.61548,
+          "lift_top_10pct": 3.647266,
+          "brier": 0.195631,
+          "model": "Regresión logística optimizada",
+          "threshold": 0.5
+        },
+        {
+          "roc_auc": 0.752614,
+          "pr_auc": 0.408672,
+          "precision": 0.198897,
+          "recall": 0.887417,
+          "f1": 0.324961,
+          "lift_top_1pct": 3.956126,
+          "lift_top_10pct": 3.297657,
+          "brier": 0.544154,
+          "model": "Gaussian Naive Bayes",
+          "threshold": 0.5
+        },
+        {
+          "roc_auc": 0.796867,
+          "pr_auc": 0.374385,
+          "precision": 0.416667,
+          "recall": 0.00473,
+          "f1": 0.009355,
+          "lift_top_1pct": 2.44903,
+          "lift_top_10pct": 2.35277,
+          "brier": 0.116046,
+          "model": "SVC",
+          "threshold": 0.5
+        }
+      ]
+    },
+    {
+      "id": "rf-validation-stages",
+      "task": "presence",
+      "title": "Random Forest · calibración y estacionalidad",
+      "phase": "validation",
+      "n": 6372,
+      "note": "Validación 2016 de la nueva ejecución. Umbral 0,50 para esta tabla; no es el umbral elegido posteriormente para test.",
+      "digits": 6,
+      "evidence": "random-forest",
+      "source": {
+        "file": "Reto5_Trazabilidad_Completa_Frontend_2017_REGENERADO(3).ipynb",
+        "cell": 37,
+        "table": 0
+      },
+      "rows": [
+        {
+          "roc_auc": 0.847381,
+          "pr_auc": 0.546662,
+          "precision": 0.365351,
+          "recall": 0.788079,
+          "f1": 0.499251,
+          "lift_top_1pct": 5.086447,
+          "lift_top_10pct": 3.69451,
+          "brier": 0.159051,
+          "model": "Random Forest sin calibrar",
+          "threshold": 0.5
+        },
+        {
+          "roc_auc": 0.847381,
+          "pr_auc": 0.546662,
+          "precision": 0.706019,
+          "recall": 0.288553,
+          "f1": 0.409671,
+          "lift_top_1pct": 5.086447,
+          "lift_top_10pct": 3.69451,
+          "brier": 0.102581,
+          "model": "Random Forest + Platt",
+          "threshold": 0.5
+        },
+        {
+          "roc_auc": 0.853665,
+          "pr_auc": 0.571962,
+          "precision": 0.707048,
+          "recall": 0.30369,
+          "f1": 0.424884,
+          "lift_top_1pct": 5.369028,
+          "lift_top_10pct": 3.855141,
+          "brier": 0.100342,
+          "model": "Random Forest + Platt + ajuste estacional",
+          "threshold": 0.5
+        }
+      ]
+    },
+    {
+      "id": "rf-test-stages",
+      "task": "presence",
+      "title": "Random Forest · evaluación final del notebook",
+      "phase": "test",
+      "n": 6372,
+      "note": "Test 2017; refit 2008–2016. Esta ejecución usa umbral 0,250055. La demo conserva la ejecución archivada, con umbral 0,242581.",
+      "digits": 6,
+      "evidence": "random-forest",
+      "source": {
+        "file": "Reto5_Trazabilidad_Completa_Frontend_2017_REGENERADO(3).ipynb",
+        "cell": 37,
+        "table": 1
+      },
+      "rows": [
+        {
+          "roc_auc": 0.846317,
+          "pr_auc": 0.598075,
+          "precision": 0.513393,
+          "recall": 0.602094,
+          "f1": 0.554217,
+          "lift_top_1pct": 5.125818,
+          "lift_top_10pct": 3.895633,
+          "brier": 0.105321,
+          "model": "Random Forest + Platt",
+          "threshold": 0.2500548716065739
+        },
+        {
+          "roc_auc": 0.852175,
+          "pr_auc": 0.616801,
+          "precision": 0.515129,
+          "recall": 0.609075,
+          "f1": 0.558177,
+          "lift_top_1pct": 5.299575,
+          "lift_top_10pct": 4.052504,
+          "brier": 0.103348,
+          "model": "Random Forest + Platt + ajuste estacional",
+          "threshold": 0.2500548716065739
+        }
+      ]
+    },
+    {
+      "id": "rf-deployed",
+      "task": "presence",
+      "title": "Random Forest · ejecución usada en la demo",
+      "phase": "test",
+      "n": 6372,
+      "note": "Resultados archivados y recalculables desde las predicciones de la aplicación. Se distinguen del nuevo entrenamiento del notebook.",
+      "digits": 6,
+      "evidence": "random-forest",
+      "rows": [
+        {
+          "model": "Random Forest + Platt + ajuste estacional · demo",
+          "roc_auc": 0.8521750557188551,
+          "pr_auc": 0.6168015809402023,
+          "brier": 0.10334811797516444,
+          "precision": 0.5021067415730337,
+          "recall": 0.6239092495636999,
+          "f1": 0.556420233463035,
+          "accuracy": 0.8210922787193974,
+          "threshold": 0.2425809815683556
+        }
+      ]
+    },
+    {
+      "id": "count-validation",
+      "task": "count",
+      "title": "Regresión y modelos de recuento · selección",
+      "phase": "validation",
+      "n": 6372,
+      "note": "Validación 2016; train 2008–2015. SVR entrenado con 30.000 filas. Poisson se seleccionó por deviance, no por MAE.",
+      "digits": 6,
+      "evidence": "random-forest",
+      "source": {
+        "file": "Reto5_Trazabilidad_Completa_Frontend_2017_REGENERADO(3).ipynb",
+        "cell": 48,
+        "table": 0
+      },
+      "rows": [
+        {
+          "MAE": 0.321192,
+          "RMSE": 0.670251,
+          "R2": 0.310872,
+          "PoissonDeviance": 0.709394,
+          "model": "Poisson con offset"
+        },
+        {
+          "MAE": 0.328258,
+          "RMSE": 0.680408,
+          "R2": 0.289828,
+          "PoissonDeviance": 0.717398,
+          "model": "Binomial negativa con offset"
+        },
+        {
+          "MAE": 0.352449,
+          "RMSE": 0.714824,
+          "R2": 0.216168,
+          "PoissonDeviance": 0.754296,
+          "model": "Lasso"
+        },
+        {
+          "MAE": 0.352725,
+          "RMSE": 0.713431,
+          "R2": 0.219219,
+          "PoissonDeviance": 0.788984,
+          "model": "Ridge"
+        },
+        {
+          "MAE": 0.352733,
+          "RMSE": 0.713441,
+          "R2": 0.219198,
+          "PoissonDeviance": 0.793137,
+          "model": "Regresión lineal"
+        },
+        {
+          "MAE": 0.268705,
+          "RMSE": 0.673999,
+          "R2": 0.303143,
+          "PoissonDeviance": 1.181669,
+          "model": "SVR"
+        }
+      ]
+    },
+    {
+      "id": "count-test",
+      "task": "count",
+      "title": "Poisson y binomial negativa · evaluación final",
+      "phase": "test",
+      "n": 6372,
+      "note": "Test 2017; refit 2008–2016. Binomial negativa es una evaluación exploratoria.",
+      "digits": 6,
+      "evidence": "random-forest",
+      "source": {
+        "file": "Reto5_Trazabilidad_Completa_Frontend_2017_REGENERADO(3).ipynb",
+        "cell": 48,
+        "table": 2
+      },
+      "rows": [
+        {
+          "MAE": 0.34025,
+          "RMSE": 0.696553,
+          "R2": 0.34392,
+          "PoissonDeviance": 0.781316,
+          "model": "Poisson con offset"
+        },
+        {
+          "MAE": 0.346117,
+          "RMSE": 0.707637,
+          "R2": 0.322876,
+          "PoissonDeviance": 0.788961,
+          "model": "Binomial negativa con offset · exploratorio"
+        }
+      ]
+    },
+    {
+      "id": "count-fit",
+      "task": "count",
+      "title": "Poisson y binomial negativa · ajuste estadístico",
+      "phase": "fit",
+      "n": 57120,
+      "note": "AIC, BIC y log-verosimilitud del ajuste en 2008–2016. No son errores de test.",
+      "digits": 6,
+      "evidence": "random-forest",
+      "source": {
+        "file": "Reto5_Trazabilidad_Completa_Frontend_2017_REGENERADO(3).ipynb",
+        "cell": 48,
+        "table": 3
+      },
+      "rows": [
+        {
+          "AIC": 57861.692133,
+          "BIC": 58259.620155,
+          "logLik": -28888.846066,
+          "nobs": 57120.0,
+          "model": "Binomial negativa con offset"
+        },
+        {
+          "AIC": 60090.12545,
+          "BIC": 60488.053472,
+          "logLik": -30003.062725,
+          "nobs": 57120.0,
+          "model": "Poisson con offset"
+        }
+      ]
+    },
+    {
+      "id": "neural-binary-test",
+      "task": "presence",
+      "title": "MLP, Random Forest y regresión logística · presencia",
+      "phase": "test",
+      "n": 6336,
+      "note": "Test 2017; train 2009–2015, validación 2016. 528 celdas; tráfico del año anterior. Sin refit posterior a validación.",
+      "digits": 4,
+      "evidence": "mlp-lstm",
+      "source": {
+        "file": "RetoRoadkill_cap08_U1_U2_U3(3).ipynb",
+        "cell": 129,
+        "table": 0
+      },
+      "rows": [
+        {
+          "accuracy": 0.8188,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "roc_auc": 0.5,
+          "pr_auc": 0.1812,
+          "brier": 0.1498,
+          "alerts": 0.0,
+          "model": "Prevalencia de entrenamiento",
+          "threshold": 0.5
+        },
+        {
+          "accuracy": 0.8253,
+          "precision": 0.5174,
+          "recall": 0.5305,
+          "f1": 0.5239,
+          "roc_auc": 0.8249,
+          "pr_auc": 0.5623,
+          "brier": 0.113,
+          "alerts": 1177.0,
+          "model": "Regresión logística",
+          "threshold": 0.262424
+        },
+        {
+          "accuracy": 0.8422,
+          "precision": 0.5674,
+          "recall": 0.5427,
+          "f1": 0.5548,
+          "roc_auc": 0.844,
+          "pr_auc": 0.6007,
+          "brier": 0.1073,
+          "alerts": 1098.0,
+          "model": "Random Forest",
+          "threshold": 0.282222
+        },
+        {
+          "accuracy": 0.8291,
+          "precision": 0.5252,
+          "recall": 0.5906,
+          "f1": 0.556,
+          "roc_auc": 0.8441,
+          "pr_auc": 0.6026,
+          "brier": 0.1055,
+          "alerts": 1291.0,
+          "model": "MLP",
+          "threshold": 0.282222
+        }
+      ]
+    },
+    {
+      "id": "neural-binary-validation",
+      "task": "presence",
+      "title": "MLP y baselines · selección del umbral",
+      "phase": "validation",
+      "n": 6336,
+      "digits": 6,
+      "note": "Validación 2016. Se conservan solo las métricas publicadas en las salidas; F1 y umbrales proceden de la tabla de selección.",
+      "evidence": "mlp-lstm",
+      "source": {
+        "file": "RetoRoadkill_cap08_U1_U2_U3(3).ipynb",
+        "cells": [
+          122,
+          123,
+          125
+        ]
+      },
+      "rows": [
+        {
+          "model": "Regresión logística",
+          "roc_auc": 0.8231562448307793,
+          "pr_auc": 0.5280107832629582,
+          "f1": 0.515568,
+          "threshold": 0.262424
+        },
+        {
+          "model": "Random Forest",
+          "pr_auc": 0.5824654451586853,
+          "f1": 0.546624,
+          "threshold": 0.282222
+        },
+        {
+          "model": "MLP",
+          "roc_auc": 0.8507484807531601,
+          "pr_auc": 0.5806149491748336,
+          "f1": 0.542553,
+          "threshold": 0.282222
+        }
+      ]
+    },
+    {
+      "id": "neural-count-test",
+      "task": "count",
+      "title": "Redes neuronales y baselines · recuentos por celda",
+      "phase": "test",
+      "n": 6336,
+      "note": "Test 2017; train 2009–2015 y validación 2016. Recuentos por celda y mes; salidas negativas recortadas a cero. MLP seleccionada: 256/128/64.",
+      "digits": 4,
+      "evidence": "mlp-lstm",
+      "source": {
+        "file": "RetoRoadkill_cap08_U1_U2_U3(3).ipynb",
+        "cell": 113,
+        "table": 0
+      },
+      "rows": [
+        {
+          "MAE": 0.4399,
+          "RMSE": 0.8659,
+          "R2": -0.0086,
+          "model": "Media de entrenamiento"
+        },
+        {
+          "MAE": 0.3548,
+          "RMSE": 0.735,
+          "R2": 0.2732,
+          "model": "Ridge"
+        },
+        {
+          "MAE": 0.397,
+          "RMSE": 0.803,
+          "R2": 0.1325,
+          "model": "Regresión Poisson sin offset"
+        },
+        {
+          "MAE": 0.3667,
+          "RMSE": 0.739,
+          "R2": 0.2652,
+          "model": "Red neuronal lineal"
+        },
+        {
+          "MAE": 0.3231,
+          "RMSE": 0.6406,
+          "R2": 0.4479,
+          "model": "MLP"
+        }
+      ]
+    },
+    {
+      "id": "intensity-test",
+      "task": "intensity",
+      "title": "MLP softmax y baselines · intensidad de atropellos",
+      "phase": "test",
+      "n": 6336,
+      "note": "Test 2017. Tres clases: sin registros, moderado y alto; cortes fijados usando entrenamiento.",
+      "digits": 4,
+      "evidence": "mlp-lstm",
+      "source": {
+        "file": "RetoRoadkill_cap08_U1_U2_U3(3).ipynb",
+        "cell": 119,
+        "table": 0
+      },
+      "rows": [
+        {
+          "accuracy": 0.8188,
+          "macro_f1": 0.3001,
+          "model": "Clase mayoritaria"
+        },
+        {
+          "accuracy": 0.83,
+          "macro_f1": 0.4158,
+          "model": "Regresión logística"
+        },
+        {
+          "accuracy": 0.8365,
+          "macro_f1": 0.4724,
+          "model": "MLP softmax"
+        }
+      ]
+    },
+    {
+      "id": "monthly-test",
+      "task": "monthly",
+      "title": "LSTM, MLP y baselines · recuento mensual agregado",
+      "phase": "test",
+      "n": 12,
+      "note": "Doce meses de 2017, ámbito fijo de 528 celdas. Ventana de 12 meses, pronóstico móvil a un mes. Esta LSTM predice recuentos; es distinta de la LSTM de presencia.",
+      "digits": 4,
+      "evidence": "mlp-lstm",
+      "source": {
+        "file": "RetoRoadkill_cap08_U1_U2_U3(3).ipynb",
+        "cell": 148,
+        "table": 0
+      },
+      "rows": [
+        {
+          "MAE": 58.8333,
+          "RMSE": 89.4381,
+          "model": "Persistencia"
+        },
+        {
+          "MAE": 26.8333,
+          "RMSE": 32.3651,
+          "model": "Naive estacional"
+        },
+        {
+          "MAE": 41.9821,
+          "RMSE": 49.3024,
+          "model": "Ridge con ventana"
+        },
+        {
+          "MAE": 34.9772,
+          "RMSE": 45.6165,
+          "model": "MLP con ventana"
+        },
+        {
+          "MAE": 47.7931,
+          "RMSE": 65.1952,
+          "model": "LSTM"
+        }
+      ]
+    },
+    {
+      "id": "monthly-validation",
+      "task": "monthly",
+      "title": "Modelos temporales · selección en validación",
+      "phase": "validation",
+      "n": 12,
+      "digits": 6,
+      "note": "Doce meses de 2016; la referencia seleccionada fue el naive estacional.",
+      "evidence": "mlp-lstm",
+      "source": {
+        "file": "RetoRoadkill_cap08_U1_U2_U3(3).ipynb",
+        "cell": 148
+      },
+      "rows": [
+        {
+          "model": "Persistencia",
+          "MAE": 53.25
+        },
+        {
+          "model": "Naive estacional",
+          "MAE": 20.25
+        },
+        {
+          "model": "Ridge con ventana",
+          "MAE": 29.29252815246582
+        },
+        {
+          "model": "MLP con ventana",
+          "MAE": 31.03948211669922
+        },
+        {
+          "model": "LSTM",
+          "MAE": 28.49042320251465
+        }
+      ]
+    },
+    {
+      "id": "mlp-architecture",
+      "task": "count",
+      "title": "MLP de recuentos · selección de arquitectura",
+      "phase": "validation",
+      "n": 6336,
+      "digits": 6,
+      "note": "MAE con predicciones recortadas a cero en validación 2016. Se seleccionó la arquitectura 256/128/64.",
+      "evidence": "mlp-lstm",
+      "source": {
+        "file": "RetoRoadkill_cap08_U1_U2_U3(3).ipynb",
+        "cell": 111
+      },
+      "rows": [
+        {
+          "model": "MLP 64/32",
+          "MAE": 0.29859083890914917
+        },
+        {
+          "model": "MLP 16",
+          "MAE": 0.32352617383003235
+        },
+        {
+          "model": "MLP 256/128/64",
+          "MAE": 0.29690009355545044
+        },
+        {
+          "model": "MLP 128/64 regularizada",
+          "MAE": 0.3020513653755188
+        }
+      ]
+    },
+    {
+      "id": "perceptron",
+      "task": "presence",
+      "title": "Perceptrón · prueba con dos variables",
+      "phase": "validation",
+      "n": 6336,
+      "digits": 6,
+      "note": "Validación 2016; utiliza log-tráfico y log-exposición. Solo se publicaron accuracy y F1; no se inventan métricas probabilísticas.",
+      "evidence": "mlp-lstm",
+      "source": {
+        "file": "RetoRoadkill_cap08_U1_U2_U3(3).ipynb",
+        "cell": 28
+      },
+      "rows": [
+        {
+          "model": "Perceptrón",
+          "accuracy": 0.6979166666666666,
+          "f1": 0.45126146788990823
+        }
+      ]
+    },
+    {
+      "id": "temporal-presence-validation",
+      "task": "presence",
+      "title": "LSTM, SimpleRNN y regresión logística con retardos",
+      "phase": "validation",
+      "n": null,
+      "digits": 6,
+      "note": "Clasificación de presencia con secuencias por celda. Resultados de los artefactos originales de la aplicación; el notebook original de entrenamiento no está entre los dos archivos adjuntos.",
+      "rows": [
+        {
+          "model": "LSTM + Platt",
+          "roc_auc": 0.8475174527690097,
+          "pr_auc": 0.5795445807398876,
+          "brier": 0.0996058508850726,
+          "threshold": 0.2663253666399734
+        },
+        {
+          "model": "SimpleRNN + Platt",
+          "roc_auc": 0.8436472563057165,
+          "pr_auc": 0.5695900281765949,
+          "brier": 0.100600952188808,
+          "threshold": 0.2972723669522845
+        },
+        {
+          "model": "Lag Logistic Regression + Platt",
+          "roc_auc": 0.8373761054550262,
+          "pr_auc": 0.550502384833271,
+          "brier": 0.1039778451618054,
+          "threshold": 0.235616847913447
+        }
+      ],
+      "source": {
+        "file": "reto09_lstm_metrics.json"
+      }
+    },
+    {
+      "id": "temporal-presence-test",
+      "task": "presence",
+      "title": "LSTM, SimpleRNN y regresión logística con retardos",
+      "phase": "test",
+      "n": 6348,
+      "digits": 6,
+      "note": "Clasificación de presencia con secuencias por celda. Resultados de los artefactos originales de la aplicación; el notebook original de entrenamiento no está entre los dos archivos adjuntos.",
+      "rows": [
+        {
+          "model": "LSTM + Platt",
+          "roc_auc": 0.8464966488254952,
+          "pr_auc": 0.6092131142547675,
+          "brier": 0.1038472811008357,
+          "precision": 0.547923322683706,
+          "recall": 0.5986038394415357,
+          "f1": 0.5721434528773979,
+          "lift_top_1pct": 5.1930628272251305,
+          "threshold": 0.2663253666399734
+        },
+        {
+          "model": "SimpleRNN + Platt",
+          "roc_auc": 0.8447883516408308,
+          "pr_auc": 0.6046199785171533,
+          "brier": 0.104342759770071,
+          "precision": 0.5697569756975698,
+          "recall": 0.5523560209424084,
+          "f1": 0.5609215773150199,
+          "lift_top_1pct": 5.1930628272251305,
+          "threshold": 0.2972723669522845
+        },
+        {
+          "model": "Lag Logistic Regression + Platt",
+          "roc_auc": 0.8379122206320162,
+          "pr_auc": 0.5906925966498882,
+          "brier": 0.1071857468843466,
+          "precision": 0.5305164319248826,
+          "recall": 0.5916230366492147,
+          "f1": 0.5594059405940595,
+          "lift_top_1pct": 4.933409685863874,
+          "threshold": 0.235616847913447
+        }
+      ],
+      "source": {
+        "file": "reto09_lstm_metrics.json"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "file": "Reto5_Trazabilidad_Completa_Frontend_2017_REGENERADO(3).ipynb",
+      "sha256": "e78bf71a02171048a6013dc297bbeb01dac142acf1d822c6e009c0ba33cffc7c"
+    },
+    {
+      "file": "RetoRoadkill_cap08_U1_U2_U3(3).ipynb",
+      "sha256": "d223d4f03d4b2460ce78b7005af27ede96e87d69b6322ba2721c12f17cf05a50"
+    }
+  ],
+  "rows": 66,
+  "note": "Comparar dentro de cada tabla: cambian tareas, muestras, entrenamiento y fases. No se usa validación como test ni se completan métricas ausentes."
+}

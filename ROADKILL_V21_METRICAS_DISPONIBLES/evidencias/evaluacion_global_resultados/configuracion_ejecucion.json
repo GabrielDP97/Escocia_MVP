@@ -1,0 +1,45 @@
+{
+  "python": "3.12.14",
+  "datasets_root": "/workspace/scratch/a2c6a6f65b68",
+  "reference_override": "None",
+  "raw_data_access": "Cargador portátil: local → servidor del proyecto → caché; sin rutas personales",
+  "training_flags": {
+    "rf": false,
+    "neuronales": false,
+    "comparacion": false,
+    "nlp": false
+  },
+  "quick_run": false,
+  "bootstrap_samples_benchmark": 250,
+  "reference_sha256": {
+    "cell_coordinates_reto06.csv": "ff386d83156d4d9551308dbbd573e5d072c514b7e85961e4354427b96d997784",
+    "clasificacion_test_2017.csv": "45228e6915e0df9d5497885b63f2c1303d36a59a3ef7464149dc488ac403b89d",
+    "economic_reference_sources.json": "7a4fcfda0d5d29f474564cb178ed6b32033889d328bddaaa97a58b9efd689fd7",
+    "metadata_reto5_temporal.json": "366d28516ec6b5c29ae6b8e5fac88020bb3709fcb5027e5ab7c12d4c4ee193da",
+    "metadata_reto9.json": "b42e7885ff67f86fed7417b1a3da1025f0b4aeb96ed07dc143d56ea5ee437a29",
+    "metricas_reto9.csv": "f8308894abad72202e3ddd8dd37598046693fafa713e88ac109216ae23606ccc",
+    "model_comparison_catalog.json": "8098e5d64eaf885bc8ec07e953bb2c60b302342d41a87c0f00ec26d2cfd193de",
+    "modulador_mensual_final_2008_2016.csv": "196c3c7197cb0ceb34742edba8ffbdb935ebfa4023498dea5af0fa7a032f912e",
+    "predicciones_test_2017.csv": "ae3d663756f3d91098d78d808a9ccd4f4100d213bcd993b96229c1a82caf016f",
+    "predicciones_test_2017_reto9.csv": "abe22ee6b9b990e4e9905c43e0ae617df0d1cc49186f472ea67c514cf283e700",
+    "reto07_nlp_metrics.json": "6e877a053770b4f96c604436bfaabea15051af7c089816519c64b072f79f0ff0",
+    "reto08_mlp_metrics.json": "93c7a5f59a413c422fdd8d080a2725aab326fed58e7af2b740e5efd9930e34d5",
+    "reto09_lstm_metrics.json": "037d8908c91f226849513f8036d2e03f7fee0afeb2c02fafb3f61d92038ebdd7",
+    "strict_temporal_audit.json": "2b922c32fc6e601ae1f213d9dbd466af38208d68468eb687790fac7022715446",
+    "strict_test_2017_summary.csv": "29f4eb4f12ea8a7c444072bab4fa0d82a005f668d945bd8a23d49a5ab2b6d096",
+    "strict_threshold_sensitivity_2017.csv": "e4005933f4e646042f28e455ee333bd0b7407ad089e5d8722f935f6b5f05a230",
+    "strict_validation_2016_summary.csv": "b0dbc05c1a3864106b26bc30121ce85055afccd66a87ee597ad900fcc05a93e8",
+    "threshold_sweep_current.csv": "2ac8a4b9135826d157fa3df57e9f0dd958be515aeaee076961ced9004350d962"
+  },
+  "versions": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.8.0",
+    "matplotlib": "3.10.8"
+  },
+  "check_counts": {
+    "COINCIDE": 332,
+    "PENDIENTE": 19
+  },
+  "limitations": "No se afirma reentrenamiento exacto de la LSTM original ni comprobación de resultados sin sus predicciones."
+}

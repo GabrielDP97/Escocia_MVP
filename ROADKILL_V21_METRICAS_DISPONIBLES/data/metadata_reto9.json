@@ -1,0 +1,45 @@
+{
+  "reto": 9,
+  "objective": "Predicción temporal futura por cell usando RNN/LSTM",
+  "random_state": 42,
+  "source_loader_notebook": "C:\\Users\\Gabriel\\Documents\\GitHub\\IA\\notebooks\\MVP_B_dos_niveles.ipynb",
+  "data_access": "cargar_dataset/cargar_archivo reutilizados de MVP_B",
+  "spatial_unit": "BNG 10 km cell (proxy de tramo, coherente con Reto 08)",
+  "sequence_features": [
+    "traffic_mean",
+    "traffic_sum",
+    "link_length_km",
+    "count_points",
+    "log_exposure",
+    "month_sin",
+    "month_cos",
+    "hist_presence",
+    "hist_log_dvc_count"
+  ],
+  "window_candidates": [
+    6,
+    12
+  ],
+  "selected_window": 12,
+  "primary_horizon_months": 1,
+  "secondary_horizon_months": 3,
+  "train_target_years": [
+    2009,
+    2015
+  ],
+  "validation_year": 2016,
+  "test_year": 2017,
+  "excluded_years": [
+    2018
+  ],
+  "exclusion_reason_2018": "Cobertura DVC sospechosamente incompleta desde julio; no se interpreta ausencia de registros como cero real.",
+  "n_train_sequences": 44388,
+  "n_validation_sequences": 6360,
+  "n_test_sequences": 6348,
+  "test_prevalence": 0.18052930056710775,
+  "selected_deep_model": "LSTM",
+  "tensorflow_available": true,
+  "calibration": "Platt ajustado exclusivamente en validation",
+  "leakage_policy": "Split por target year; inputs estrictamente anteriores al target; preprocessor fit solo en train.",
+  "reto8_same_subset_available": false
+}

@@ -1,0 +1,21 @@
+{
+  "uk_recent": {
+    "frequency_dvc_claims_per_1000_vehicle_years": 0.4843672456575682,
+    "frequency_method": "Zurich 2021 estimated 32,000 animal collision claims/year × 61% deer / 40.3 million licensed UK vehicles (DfT/DVLA 2021) × 1,000",
+    "frequency_status": "derived proxy; not a Zurich actuarial rate",
+    "average_dvc_claim_cost_gbp": 4317.24,
+    "average_cost_year": 2024,
+    "sources": [
+      "https://www.zurich.co.uk/media-centre/oh-deer-motorists-warned-spring-time-deer-collisions",
+      "https://www.zurich.co.uk/media-centre/staycation-boom-drives-54-percent-increase-in-wildlife-fatalities-on-uk-roads",
+      "https://www.gov.uk/government/statistics/vehicle-licensing-statistics-2021/vehicle-licensing-statistics-2021"
+    ]
+  },
+  "fortis_historical": {
+    "frequency_dvc_claims_per_1000_policies_year": 0.35666666666666663,
+    "frequency_method": "428 DVC claims in 2005 / approximately 1.2 million private motor policies × 1,000",
+    "average_dvc_claim_cost_gbp": 1320,
+    "average_cost_year": 2004,
+    "source": "https://www.deercollisions.co.uk/web-content/ftp/DVC_England_FinalAs.pdf"
+  }
+}

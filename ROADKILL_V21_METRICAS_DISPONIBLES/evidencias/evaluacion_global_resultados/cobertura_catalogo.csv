@@ -1,0 +1,18 @@
+grupo,titulo,fase,modelos,seccion,prueba_ejecutada,estado
+classical-validation,Clasificadores tabulares · selección de modelos,validation,14,12,False,Código incluido; entrenamiento no ejecutado en esta pasada
+rf-validation-stages,Random Forest · calibración y estacionalidad,validation,3,12,False,Código incluido; entrenamiento no ejecutado en esta pasada
+rf-test-stages,Random Forest · evaluación final del notebook,test,2,12,False,Código incluido; entrenamiento no ejecutado en esta pasada
+rf-deployed,Random Forest · ejecución usada en la demo,test,1,4,True,Recalculado desde CSV original
+count-validation,Regresión y modelos de recuento · selección,validation,6,12,False,Código incluido; entrenamiento no ejecutado en esta pasada
+count-test,Poisson y binomial negativa · evaluación final,test,2,12,False,Código incluido; entrenamiento no ejecutado en esta pasada
+count-fit,Poisson y binomial negativa · ajuste estadístico,fit,2,12,False,Código incluido; entrenamiento no ejecutado en esta pasada
+neural-binary-test,"MLP, Random Forest y regresión logística · presencia",test,4,13,False,Código incluido; entrenamiento no ejecutado en esta pasada
+neural-binary-validation,MLP y baselines · selección del umbral,validation,3,13,False,Código incluido; entrenamiento no ejecutado en esta pasada
+neural-count-test,Redes neuronales y baselines · recuentos por celda,test,5,13,False,Código incluido; entrenamiento no ejecutado en esta pasada
+intensity-test,MLP softmax y baselines · intensidad de atropellos,test,3,13,False,Código incluido; entrenamiento no ejecutado en esta pasada
+monthly-test,"LSTM, MLP y baselines · recuento mensual agregado",test,5,13,False,Código incluido; entrenamiento no ejecutado en esta pasada
+monthly-validation,Modelos temporales · selección en validación,validation,5,13,False,Código incluido; entrenamiento no ejecutado en esta pasada
+mlp-architecture,MLP de recuentos · selección de arquitectura,validation,4,13,False,Código incluido; entrenamiento no ejecutado en esta pasada
+perceptron,Perceptrón · prueba con dos variables,validation,1,13,False,Código incluido; entrenamiento no ejecutado en esta pasada
+temporal-presence-validation,"LSTM, SimpleRNN y regresión logística con retardos",validation,3,5,False,Pendiente de validation original; test verificado
+temporal-presence-test,"LSTM, SimpleRNN y regresión logística con retardos",test,3,5,True,Recalculado desde CSV original
